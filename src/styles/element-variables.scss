@@ -1,0 +1,41 @@
+/* Element Variables */
+
+// Override Element UI variables
+$--color-primary: $colorPrimary;
+$--color-success: $colorSuccess;
+$--color-warning: $colorWarning;
+$--color-danger: $colorDanger;
+$--color-info: $colorInfo;
+$--color-white: $colorWhite;
+$--color-black: $colorBlack;
+
+$--background-color-base: #F1F1F1;
+$--background-color-extra: #FAFAFA;
+$--background-color-white: #FFFFFF;
+$--background-color-black: #000000;
+
+$--color-text-primary: #3E4044;
+$--color-text-regular: #606266;
+$--color-text-secondary: #909399;
+$--color-text-placeholder: #D8D8D8;
+
+$--font-weight-normal: 400;
+$--font-weight-bold: 700;
+
+$--border-color-base: #DDDDDD;
+$--border-color-light: #EEEEEE;
+$--border-color-lighter: #EEEEEE;
+$--border-color-extra-light: #F1F1F1;
+$--button-font-weight: $--font-weight-normal;
+
+$--table-border-color: $--border-color-light;
+$--table-font-color: $--color-text-primary;
+$--table-header-font-color: $--color-text-primary;
+$--table-row-hover-background-color: $--background-color-extra;
+$--table-header-background-color: $--background-color-extra;
+
+// Icon font path, required
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// Apply overrided variables in Element UI
+@import '~element-ui/packages/theme-chalk/src/index';
