@@ -16,7 +16,10 @@ import '@/permission'
 import * as directives from '@/directives'
 import * as filters from './filters'
 
+import pubComponent from '@/index'
+
 Vue.use(ElementUI)
+Vue.use(pubComponent)
 Vue.use(SvgIcon, {
   tagName: 'svg-icon',
   defaultWidth: '1em',

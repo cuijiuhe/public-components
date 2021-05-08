@@ -76,6 +76,14 @@ export const constantRouterMap: any[] = [
         }
       },
       {
+        path: 'check',
+        component: () => import(/* webpackChunkName: "detail" */ '@/views/components/check/index.vue'),
+        meta: {
+          title: '预览',
+          icon: 'tradingvolume'
+        }
+      },
+      {
         path: '404',
         component: () => import(/* webpackChunkName: "404" */ '@/views/404.vue'),
         meta: {

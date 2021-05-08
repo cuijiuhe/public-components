@@ -35,6 +35,7 @@
         <el-button type="default" size="small" @click="handleFilterReset()">重置</el-button>
         <el-button type="primary" size="small" @click="handleFilterList()">查询</el-button>
       </div>
+      <ft-buttons>按钮</ft-buttons>
     </el-card>
     <el-card class="mod-card mod-filter" shadow="never">
       <div class="mod-card-body" :class="{'mod-card-body-height': filter2Length > 3 && !filter2Extend, 'mod-card-body-extend': filter2Extend}">
