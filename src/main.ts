@@ -18,6 +18,7 @@ import * as filters from './filters'
 
 import pubComponent from '@/index'
 
+
 Vue.use(ElementUI)
 Vue.use(pubComponent)
 Vue.use(SvgIcon, {
@@ -25,6 +26,8 @@ Vue.use(SvgIcon, {
   defaultWidth: '1em',
   defaultHeight: '1em'
 })
+
+
 
 // Register global directives
 Object.keys(directives).forEach(key => {

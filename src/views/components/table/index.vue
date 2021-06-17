@@ -35,7 +35,8 @@
         <el-button type="default" size="small" @click="handleFilterReset()">重置</el-button>
         <el-button type="primary" size="small" @click="handleFilterList()">查询</el-button>
       </div>
-      <ft-buttons>按钮</ft-buttons>
+      <ft-buttons >按钮11</ft-buttons>
+      <div @click="openNewW()">@click="openNewW()"</div>
     </el-card>
     <el-card class="mod-card mod-filter" shadow="never">
       <div class="mod-card-body" :class="{'mod-card-body-height': filter2Length > 3 && !filter2Extend, 'mod-card-body-extend': filter2Extend}">
@@ -770,6 +771,12 @@ export default class extends Vue {
   // 关闭弹层
   handleCloseDialogDetail() {
     this.dialogDetails = false;
+  }
+
+  private openNewW() {
+    const path = this.$router.resolve({path: '/components/form', params: {id: '12'}})
+    console.log(path)
+    window.open(path.href,'_blank')
   }
 
   // 提交表单项

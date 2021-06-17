@@ -1,5 +1,7 @@
 <template>
-    <button class="ft-button" :class="[`btn-${type}`]">
+    <button class="ft-button" :class="[`btn-${type}`, {'is-round': round, 'is-circle': circle}]"
+        @click='handleClick'
+    >
         <span>
             <slot></slot>
         </span>
@@ -11,11 +13,26 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component({
     name: "FtButton",
+    props: {
+        circle: {
+            type: Boolean,
+            required: false,
+            default: false
+        }
+    }
 })
 export default class extends Vue {
-    @Prop({ default: 'default' }) private type!: String
+    @Prop({ default: 'default' }) private type!: String;
+
+    @Prop({ default: false }) private round!: Boolean;
+
+    // @Prop({ default: false }) private circle!: Boolean;
     mounted(){
-        console.log(this.type)
+        console.log(this.circle)
+    }
+
+    handleClick (e :any) {
+        this.$emit('click', e)
     }
 }
 </script>
@@ -48,5 +65,26 @@ export default class extends Vue {
             border-color: #c6e2ff;
             background-color: #ecf5ff;
         }
+    }
+
+    .btn-danger {
+        color: #fff;
+        background-color: #f56c6c;
+        border-color: #f56c6c;
+        &:hover,
+        &:focus {
+            background: #f78989;
+            border-color: #f78989;
+            color: #fff;
+        }
+    }
+
+    .ft-button.is-round {
+        border-radius: 20px;
+        padding: 12px 23px;
+    }
+    .ft-button.is-circle {
+        border-radius: 50%;
+        padding: 12px;
     }
 </style>
