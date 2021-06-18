@@ -63,7 +63,7 @@
         <el-pagination v-if='this.tableOption.total'
           :total="tableOption.total"
           :page-size="tableOption.pageSize"
-          :page-sizes="[10, 20, 30, 40]"
+          :page-sizes="defaultPageArr"
           background
           layout="total, sizes, prev, pager, next"
           @current-change="handleCurrentChange"
@@ -96,20 +96,18 @@ import { Component, Vue, Prop } from "vue-property-decorator";
         @Prop({
            type: Object,
            required: true,
-           default: () => {}
+           default: () => {
+               return {
+
+               }
+            }
         })
         private tableOption !: Object;
 
-        // @Prop({
-        //    type: Number,
-        //    required: true,
-        //    default: () => []
-        // })
-        // private pageSize !: Number;
-
+        private defaultPageArr: Array<any> = [10, 20, 30, 40];
 
         mounted () {
-            console.log(this.tableOption)
+            (this.tableOption as any).pageArr ? this.defaultPageArr = (this.tableOption as any).pageArr : '';
         }
 
         handleShowDialogDetail (val: any) {

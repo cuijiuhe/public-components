@@ -40,11 +40,11 @@
 
 <script lang='ts'>
 import { Component, Vue, Prop } from "vue-property-decorator";
-import Item from './item.vue';
+// import Item from './item.vue';
     @Component({
         name: "ProForm",
         components: {
-            Item
+            // Item
         }
     })
     export default class extends Vue {

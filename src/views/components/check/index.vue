@@ -156,8 +156,9 @@ export default class extends Vue {
           pageSize: 10,
           isNumber: true, //序号
           isSelection: true, //checkbox
-          tableDescribe: '表格标题', //checkbox
+          tableDescribe: '32', //checkbox
           isBorder: true, //是否需要纵向表格
+          pageArr: [40, 50 ,60] //分页数组
 
         }
   // handleClick () {
