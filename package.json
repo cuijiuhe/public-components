@@ -1,6 +1,6 @@
 {
   "name": "foton-ui-pc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "cuijiuhe",
   "scripts": {
     "serve": "vue-cli-service serve",
