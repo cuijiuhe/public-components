@@ -1,7 +1,7 @@
 {
   "name": "web-project-template",
   "version": "0.0.2",
-  "private": true,
+  "private": false,
   "author": "cuijiuhe",
   "scripts": {
     "serve": "vue-cli-service serve",
