@@ -1,7 +1,6 @@
 {
   "name": "foton-ui",
   "version": "0.0.4",
-  "private": true,
   "author": "cuijiuhe",
   "scripts": {
     "serve": "vue-cli-service serve",
